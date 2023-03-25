@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      body {
+        color: blanchedalmond;
+        background-color: steelblue;
+        text-align: center;
+      }
+    </style>
+  </head>&nbsp;
+<body>
+    <h1>Pokemon, Gotta Catch 'Em All</h1>
+    &nbsp;&nbsp;&nbsp;
+    <ul> 
+<li>
+                <h2>Name: <%= show.name.toUpperCase() %></h2>
+                <img src="<%= show.image %>">
+                <h2>Pokemon Type: <%= show.type.toUpperCase() %></h2>
+                <h2>Pokemon Status: <%= show.status.toUpperCase() %></h2>
+            </li>
+       <button> <a href="/">Main Page</a></button>
+    </ul>
+</body>
+</html>
