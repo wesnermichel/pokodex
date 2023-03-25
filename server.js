@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
 const port = 4000;
+const router = express.Router();
 const methodOverride = require("method-override");
 
 // Models - Database stuff
-const models = require("./models/pokemon.js");
-
-const pokemon = models.pokemon;
+const pokemon = require("./models/pokemon.js");
 
 //Middleware
 app.set("view engine", "ejs");
@@ -20,7 +19,7 @@ app.use((req, res, next) => {
 
 //INDEX ROUTE
 app.get("/", (req, res) => {
-  res.render("index", { pokemon });
+  res.render("index", { pokemon:pokemon });
 });
 
 //SHOW ROUTE
@@ -58,7 +57,7 @@ router.put("/:indexOfPokemon/update", (req, res) => {
 
 // DESTROY/DELETE ROUTE
 router.delete("/:indexOfPokemonArray", (req, res) => {
-  fruits.splice(req.params.indexOfFruitsArray, 1);
+  pokemon.splice(req.params.indexOfPokemonsArray, 1);
   res.redirect("/");
 });
 

@@ -1,0 +1,41 @@
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      body {
+        color: blanchedalmond;
+        background-color: steelblue;
+        text-align: center;
+      }
+      a {
+         color:white;
+      }
+      li {
+        margin-top: 20px;
+      }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+    </style>    
+  </head>
+  <body>
+    <h1>Pokemon World</h1>
+     <% console.log(pokemon) %>
+    <div class="flex-container">
+          <% for (let i = 0; i < 50; i++) { %>
+      <div> <img src="<%= pokemon[i].img %>" width="200" /> </div>
+      <% } %>
+    </div>
+
+  </body>
+</html>

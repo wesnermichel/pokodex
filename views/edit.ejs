@@ -7,7 +7,7 @@
     <h1>Edit Pokemon </h1>
     <form action="/pockemon/<%= pokemon.id %>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=pokemon.name%>"/>
-        Color: <input type="text" name="color" value="<%=pokemon.color %>"/>
+         <img src="<%= show.image %>">
         Is Ready to Eat: 
         <input type="checkbox" name="readyToEat"
             <% if(fruit.readyToEat === true) { %>
