@@ -32,10 +32,14 @@
     <h1>Pokemon World</h1>
      <% console.log(pokemon) %>
     <div class="flex-container">
-          <% for (let i = 0; i < 50; i++) { %>
-      <div> <img src="<%= pokemon[i].img %>" width="200" /> </div>
+          <% for (let i = 0; i < pokemen.length; i++) { %>
+      <div> <a href="/pokemon/<%=pokemon[i].id%>"><img src="<%= pokemon[i].img %>" width="200" /></a> </div>
       <% } %>
     </div>
 
   </body>
+  <footer>
+  <p></p>
+  <a href="https://generalassemb.ly/">Made by GA Carina Sqaud Student: Wes</a>
+</footer>
 </html>

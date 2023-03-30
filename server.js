@@ -5,7 +5,7 @@ const router = express.Router();
 const methodOverride = require("method-override");
 
 // Models - Database stuff
-const pokemon = require("./models/pokemon.js");
+const pokemons = require("./models/pokemon.js");
 
 //Middleware
 app.set("view engine", "ejs");
@@ -13,20 +13,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 app.use((req, res, next) => {
-  console.log("this is my own middleware");
+  console.log("Middleware working");
   next();
 });
 
 //INDEX ROUTE
 app.get("/", (req, res) => {
-  res.render("index", { pokemon:pokemon });
+  res.render("index", { pokemon: pokemons });
 });
 
 //SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
   let pokemon = pokemons[req.params.id];
-  res.render("show", { show: pokemon });
+  res.render("show.ejs", { show: pokemon });
+  console.log(show);
 });
+f;
 //NEW ROUTE
 app.get("/pokemon/"),
   (req, res) => {
