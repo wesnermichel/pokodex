@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000;
+const port = 4002;
 const router = express.Router();
 const methodOverride = require("method-override");
 
@@ -24,13 +24,13 @@ app.get("/", (req, res) => {
 
 //SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
-  let pokemon = pokemons[req.params.id];
-  res.render("show.ejs", { show: pokemon });
-  console.log(show);
+  let pokemonx = pokemons[req.params.id];
+  res.render("show.ejs", { pokemons: pokemonx });
+  console.logs("show passed");
 });
-f;
+
 //NEW ROUTE
-app.get("/pokemon/"),
+app.get("/pokemon/new"),
   (req, res) => {
     res.render("new", { pokemon });
   };
