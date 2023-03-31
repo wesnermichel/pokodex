@@ -33,7 +33,7 @@
      <% console.log(pokemon) %>
     <div class="flex-container">
           <% for (let i = 0; i < pokemon.length; i++) { %>
-      <div> <a href="/pokemon/<%=pokemon[i].id%>"><img src="<%= pokemon[i].img %>" width="200" /></a> </div>
+      <div> <a href="/pokemon/<%=i%>"><img src="<%= pokemon[i].img %>" width="200" /></a> </div>
       <% } %>
     </div>
 

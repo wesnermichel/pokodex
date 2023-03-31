@@ -24,9 +24,10 @@ app.get("/", (req, res) => {
 
 //SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
+  console.log (pokemons)
   let pokemonx = pokemons[req.params.id];
-  res.render("show.ejs", { pokemons: pokemonx });
-  console.logs("show passed");
+  res.render("show.ejs", { pokemon: pokemonx });
+
 });
 
 //NEW ROUTE
