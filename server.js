@@ -24,20 +24,21 @@ app.get("/", (req, res) => {
 
 //SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
-  console.log (pokemons)
-  let pokemonx = pokemons[req.params.id];
-  res.render("show.ejs", { pokemon: pokemonx });
+  // console.log (pokemons)
+  let pokemon = pokemons.find(poke => poke.id===req.params.id)
+  console.log(pokemon)
+  res.render("show.ejs", { pokemon : pokemon });
 
 });
 
 //NEW ROUTE
 app.get("/pokemon/new"),
   (req, res) => {
-    res.render("new", { pokemon });
+    res.render("new.ejs", { pokemon: pokemonx });
   };
 
 //EDIT PAGE
-router.get("/:indexOfPokemon/edit", (req, res) => {
+router.get("pokemon/:indexOfPokemon/edit", (req, res) => {
   res.render("edit.ejs", {
     pokemon: pokemon[req.params.indexOfPokemon],
     index: req.params.indexOfPokemonArray,
