@@ -36,6 +36,10 @@
        <button> <a href="/pokemon/new">CREATE NEW POKEMON</a></button>
        <button> <a href="/pokemon">DELETE POKEMON</a></button>
     </ul>
+    <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit</button></a>
+          <form action="/pokemon/<%= pokemon._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete"/>
+          </form>
 </body>
 <footer>
   <p></p>

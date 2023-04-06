@@ -25,16 +25,15 @@ app.get("/", (req, res) => {
 //SHOW ROUTE
 app.get("/pokemon/:id", (req, res) => {
   // console.log (pokemons)
-  let pokemon = pokemons.find(poke => poke.id===req.params.id)
+  let pokemon = pokemons.find(poke => poke.id ==req.params.id)
   console.log(pokemon)
   res.render("show.ejs", { pokemon : pokemon });
 
 });
 
 //NEW ROUTE
-app.get("/pokemon/new"),
-  (req, res) => {
-    res.render("new.ejs", { pokemon: pokemonx });
+app.get("/pokemon/new"), (req, res) => {
+    res.render("views/new.ejs", { pokemon: pokemonx });
   };
 
 //EDIT PAGE
